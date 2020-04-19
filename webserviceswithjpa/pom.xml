@@ -67,7 +67,7 @@
  
 
 		</plugins>
-<finalName>docker-spring-boot</finalName>
+<finalName>webserviceswithjpa</finalName>
 	</build>
 
 </project>
