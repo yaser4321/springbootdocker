@@ -42,7 +42,7 @@ public class StudentController {
 		return repo.findAll();
 	}
 	
-	@GetMapping( path="/{userId}",produces =  org.springframework.http.MediaType.APPLICATION_XML_VALUE)
+	@GetMapping( path="/{userId}",produces =  org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
 	public Optional<Student> find(@PathVariable String userId){
 		
 		return repo.findById(userId);
@@ -52,7 +52,7 @@ public class StudentController {
 		System.out.println(repo.findByLastNameSorted(lastName));
 		return repo.findByLastName(lastName);
 	}
-	 @PostMapping(consumes = "application/xml",produces={MediaType.APPLICATION_XML_VALUE})
+	 @PostMapping(consumes = "application/xml",produces={MediaType.APPLICATION_JSON_VALUE})
 	    public Student create(@RequestBody Student student, final HttpServletResponse response) {
 		// response.setStatus(HttpServletResponse.SC_RESET_CONTENT);  
 		 return repo.save(student);
